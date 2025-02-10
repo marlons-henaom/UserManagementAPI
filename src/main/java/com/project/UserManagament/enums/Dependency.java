@@ -1,6 +1,6 @@
 package com.project.UserManagament.enums;
 
-public enum Dependencia {
+public enum Dependency {
     CONSULTORIA,
     FABRICA,
     DESARROLLO

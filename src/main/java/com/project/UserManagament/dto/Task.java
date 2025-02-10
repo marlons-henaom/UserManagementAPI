@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Tarea {
+public class Task {
     private int id;
-    private String nombre;
+    private String name;
 }

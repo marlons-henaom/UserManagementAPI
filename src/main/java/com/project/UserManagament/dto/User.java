@@ -1,22 +1,23 @@
 package com.project.UserManagament.dto;
 
-import com.project.UserManagament.enums.Dependencia;
-import com.project.UserManagament.enums.Perfil;
+import com.project.UserManagament.enums.Dependency;
+import com.project.UserManagament.enums.Profile;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Getter
 @Setter
-public class Usuario {
+public class User {
+
     private int id;
-    private Date fecha_nacimiento;
-    private Boolean activo;
-    private Dependencia dependencia;
-    private List<Perfil> perfil;
-    private List<Fila> filas;
+    private LocalDate date_born;
+    private Boolean active;
+    private Dependency dependency;
+    private List<Profile> profile;
+    private List<Assignment> assignments;
 
 //    public int getId() {
 //        return id;

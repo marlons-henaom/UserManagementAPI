@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Fila {
-    private Tarea tarea;
-    private int duracion;
+public class Assignment {
+    private Task task;
+    private int duration;
 }

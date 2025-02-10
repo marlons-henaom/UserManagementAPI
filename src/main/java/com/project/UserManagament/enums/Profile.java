@@ -1,6 +1,6 @@
 package com.project.UserManagament.enums;
 
-public enum Perfil {
+public enum Profile {
     ADMINISTRADOR,
     CONSULTA,
     OPERADOR

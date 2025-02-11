@@ -1,4 +1,4 @@
-package com.project.UserManagament.enums;
+package com.project.usermanagament.enums;
 
 public enum Profile {
     ADMINISTRADOR,

@@ -1,15 +1,9 @@
-package com.project.UserManagament.Entities;
+package com.project.usermanagament.entities;
 
-import com.project.UserManagament.dto.Assignment;
-import com.project.UserManagament.enums.Dependency;
-import com.project.UserManagament.enums.Profile;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
-import java.util.Date;
-import java.util.List;
 
 public class TaskEntity {
 

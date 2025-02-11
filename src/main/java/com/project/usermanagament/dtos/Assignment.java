@@ -1,4 +1,4 @@
-package com.project.UserManagament.dto;
+package com.project.usermanagament.dtos;
 
 import lombok.Getter;
 import lombok.Setter;

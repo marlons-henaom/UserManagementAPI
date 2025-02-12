@@ -1,9 +1,6 @@
 package com.project.usermanagement.entities;
 
-import com.project.usermanagement.dtos.Dependency;
-import com.project.usermanagement.dtos.Profile;
 import com.project.usermanagement.dtos.Task;
-import com.project.usermanagement.dtos.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,14 +23,14 @@ public class AssignmentEntity {
     private int id;
 
     // Relation ManyToOne with Task (key forbear)
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "task_id", nullable = false)
-    private Task task;
+    private TaskEntity task;
 
     // Relation ManyToOne with User (key forbear)
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    private UserEntity user;
 
     @Column(name = "duration", nullable = false)
     private int duration;

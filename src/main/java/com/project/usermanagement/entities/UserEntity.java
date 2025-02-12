@@ -1,7 +1,5 @@
 package com.project.usermanagement.entities;
 
-import com.project.usermanagement.dtos.Dependency;
-import com.project.usermanagement.dtos.Profile;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,7 +31,7 @@ public class UserEntity {
     // Relation ManyToOne with Dependency (key forbear)
     @ManyToOne
     @JoinColumn(name = "dependency_id", nullable = false)
-    private Dependency dependency;
+    private DependencyEntity dependency;
 
     // Relation ManyToMany with Profile
     @ManyToMany
@@ -43,6 +41,6 @@ public class UserEntity {
             inverseJoinColumns = @JoinColumn(name = "profile_id"),
             uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "profile_id"})
     )
-    private List<Profile> profile;
+    private List<ProfileEntity> profile;
 
 }

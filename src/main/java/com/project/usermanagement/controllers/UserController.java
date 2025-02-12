@@ -20,7 +20,7 @@ public class UserController {
 
     @PostMapping("/task")
     public ResponseEntity<String> task(@RequestBody Task task){
-        String response = task.getName().concat("_"+task.getId());
+        String response = task.getTask().concat("_"+task.getId());
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 

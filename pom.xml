@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.project</groupId>
-	<artifactId>UserManagament</artifactId>
+	<artifactId>UserManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>UserManagament</name>
 	<description>management of a User that may have several tasks associated with it.</description>

@@ -3,6 +3,7 @@ package com.project.usermanagament.controllers;
 import com.project.usermanagament.dtos.Task;
 import com.project.usermanagament.dtos.User;
 import com.project.usermanagament.services.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,7 @@ public class UserController {
     }
 
     @PostMapping("/user")
-    public ResponseEntity<User> saveUser(@RequestBody User user){
+    public ResponseEntity<User> saveUser(@Valid @RequestBody User user){
         user = userService.saveUser(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }

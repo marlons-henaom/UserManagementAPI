@@ -9,6 +9,7 @@ public class TaskConverter {
 
     public TaskEntity convertDTOtoEntity(Task task){
         TaskEntity te = new TaskEntity();
+        te.setId(task.getId());
         te.setTask(task.getTask());
         return te;
     }

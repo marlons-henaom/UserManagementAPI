@@ -33,14 +33,4 @@ public class UserEntity {
     @JoinColumn(name = "dependency_id", nullable = false)
     private DependencyEntity dependency;
 
-    // Relation ManyToMany with Profile
-    @ManyToMany
-    @JoinTable(
-            name = "user_profile",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "profile_id"),
-            uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "profile_id"})
-    )
-    private List<ProfileEntity> profile;
-
 }

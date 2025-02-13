@@ -29,6 +29,5 @@ public class User {
     private LocalDate dateBorn;
     private Boolean active;
     private Dependency dependency;
-    private List<Profile> profile;
 
 }

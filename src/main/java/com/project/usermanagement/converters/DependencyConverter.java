@@ -9,6 +9,7 @@ public class DependencyConverter {
 
     public DependencyEntity convertDTOtoEntity(Dependency dependency){
         DependencyEntity de = new DependencyEntity();
+        de.setId(dependency.getId());
         de.setDependency(dependency.getDependency());
         return de;
     }

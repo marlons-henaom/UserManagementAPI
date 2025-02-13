@@ -1,5 +1,6 @@
 package com.project.usermanagement.services.impl;
 
+import com.project.usermanagement.converters.DependencyConverter;
 import com.project.usermanagement.entities.UserEntity;
 import com.project.usermanagement.converters.UserConverter;
 import com.project.usermanagement.dtos.User;
@@ -22,6 +23,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserConverter userConverter;
+
+    @Autowired
+    private DependencyConverter dependencyConverter;
 
     @Override
     public User saveUser(User user) {
@@ -62,6 +66,7 @@ public class UserServiceImpl implements UserService {
             UserEntity ue = optEn.get();
             ue.setDateBorn(user.getDateBorn());
             ue.setActive(user.getActive());
+            ue.setDependency(dependencyConverter.convertDTOtoEntity(user.getDependency()));
             userDto = userConverter.convertEntityDTO(ue);
             userRepository.save(ue);
         } else {

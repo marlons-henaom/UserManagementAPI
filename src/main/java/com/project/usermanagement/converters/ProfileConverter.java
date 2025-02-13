@@ -9,6 +9,7 @@ public class ProfileConverter {
 
     public ProfileEntity convertDTOtoEntity(Profile profile){
         ProfileEntity pe = new ProfileEntity();
+        pe.setId(profile.getId());
         pe.setProfile(profile.getProfile());
         return pe;
     }
